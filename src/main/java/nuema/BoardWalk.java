@@ -36,7 +36,7 @@ public class BoardWalk {
                 (step > 0 && board.getSize() - 1 == boundary);
     }
 
-    private void addPositionMoveCol(int step) {
+    private void addColStep(int step) {
         if (isOutOfBoard(step, getLastPosition().getCol())) return;
 
         moves.add(new Position(
@@ -44,7 +44,7 @@ public class BoardWalk {
                 getLastPosition().getCol() + step));
     }
 
-    private void addPositionMoveRow(int step) {
+    private void addRowStep(int step) {
         if (isOutOfBoard(step, getLastPosition().getRow())) return;
 
         moves.add(new Position(
@@ -56,16 +56,16 @@ public class BoardWalk {
     public void takeAction(Action action) {
         switch (action) {
             case FW: // ->
-                addPositionMoveCol(STEP);
+                addColStep(STEP);
                 break;
             case UP: // ↑
-                addPositionMoveRow(-STEP);
+                addRowStep(-STEP);
                 break;
             case DOWN: // ↓
-                addPositionMoveRow(STEP);
+                addRowStep(STEP);
                 break;
             case BACK: // <-
-                addPositionMoveCol(-STEP);
+                addColStep(-STEP);
                 break;
         }
     }
