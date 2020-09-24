@@ -5,20 +5,17 @@ import java.util.List;
 import nuema.Board.*;
 
 /**
- * @Description Main. This has a boardWalk and a list of gameActions.
+ * @Description Main. This has a  5x5 boardWalk and a list of gameActions.
  * @Author Nuema
  * */
-public class BoardGame {
+public class App {
 
     static BoardWalk board;
     static List<Action> game;
 
     public static void main(String args[]) {
-        System.out.println("- BOARD WALK - Given a 5x5 board and a set of posible " +
-                "(FW ->, DOWN ↓ , BACK <-, UP ↑) actions," +
-                " this prints the values of the walked lockers ");
-
         board = new BoardWalk(5);
+        BoardWalkHeper.printTitle(board);
 
         game = new ArrayList<>();
         game.add(Board.Action.FW);
@@ -31,8 +28,7 @@ public class BoardGame {
 
         game.stream().forEach(board::takeAction);
 
-        System.out.println("Moves: " + board.getMoves().size());
-        System.out.println(board.getMovesResult().toString());
+        BoardWalkHeper.printBoardGame(board, game);
     }
 
 }

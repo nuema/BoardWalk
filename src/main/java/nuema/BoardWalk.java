@@ -79,4 +79,5 @@ public class BoardWalk {
     public int getBoardSize() {
         return board.getSize();
     }
+
 }
