@@ -15,7 +15,7 @@ public class App {
 
     public static void main(String args[]) {
         board = new BoardWalk(5);
-        BoardWalkHeper.printTitle(board);
+        BoardWalkHelper.printTitle(board);
 
         game = new ArrayList<>();
         game.add(Board.Action.FW);
@@ -28,7 +28,7 @@ public class App {
 
         game.stream().forEach(board::takeAction);
 
-        BoardWalkHeper.printBoardGame(board, game);
+        BoardWalkHelper.printBoardGame(board, game);
     }
 
 }

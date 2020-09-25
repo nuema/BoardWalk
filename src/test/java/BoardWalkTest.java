@@ -1,7 +1,6 @@
 import nuema.Board.*;
 import nuema.BoardWalk;
-import nuema.BoardWalkHeper;
-import org.junit.jupiter.api.BeforeEach;
+import nuema.BoardWalkHelper;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -25,7 +24,7 @@ public class BoardWalkTest {
         assertThat(board.getMovesResult()).containsAll(Arrays.asList("1", "2", "3"));
 
         //Just to check
-        BoardWalkHeper.printBoardGame(board, game);
+        BoardWalkHelper.printBoardGame(board, game);
     }
 
     @Test

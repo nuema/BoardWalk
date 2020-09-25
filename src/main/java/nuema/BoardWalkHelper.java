@@ -7,7 +7,7 @@ import java.util.List;
  * @Author Nuema
  */
 
-public class BoardWalkHeper {
+public class BoardWalkHelper {
 
     public static void printTitle (BoardWalk boardWalk) {
         System.out.println("   ____     U  ___ u    _       ____    ____                         _      _       _  __    \n" +
